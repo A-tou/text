@@ -4,7 +4,7 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 4886009435379397696
-    second: char_hero_beanMan_body
+    second: char_hero_beanMan_0
   - first:
       213: -6553591179306775815
     second: char_hero_beanMan_1
@@ -16,10 +16,10 @@ TextureImporter:
     second: char_hero_beanMan_3
   - first:
       213: -5416323009033240211
-    second: char_hero_beanMan_lefteye
+    second: char_hero_beanMan_4
   - first:
       213: 2465269550769596139
-    second: char_hero_beanMan_righteye
+    second: char_hero_beanMan_5
   - first:
       213: -8138346719408149113
     second: char_hero_beanMan_6
@@ -121,7 +121,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: char_hero_beanMan_body
+      name: char_hero_beanMan_0
       rect:
         serializedVersion: 2
         x: 79
@@ -205,7 +205,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_hero_beanMan_lefteye
+      name: char_hero_beanMan_4
       rect:
         serializedVersion: 2
         x: 18
@@ -226,7 +226,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_hero_beanMan_righteye
+      name: char_hero_beanMan_5
       rect:
         serializedVersion: 2
         x: 337
