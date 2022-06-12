@@ -25,16 +25,12 @@ public class Remover : MonoBehaviour
 			Instantiate(splash, col.transform.position, transform.rotation);
 			
 			Destroy (col.gameObject);
-			
-            
 			StartCoroutine("ReloadGame");
 		}
 		else
 		{
 			
 			Instantiate(splash, col.transform.position, transform.rotation);
-
-			
 			Destroy (col.gameObject);	
 		}
 	}

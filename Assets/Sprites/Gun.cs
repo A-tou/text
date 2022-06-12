@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
@@ -19,20 +20,23 @@ public class Gun : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            
-            GetComponent<AudioSource>().Play();
-            if (playerCtrl.bFaceRight)
+            if (Input.GetButtonDown("Fire1"))
             {
-                GameObject bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(0, 0, 0));
-                Rigidbody2D bi = bulletInstance.GetComponent<Rigidbody2D>();
-                bi.velocity = new Vector2(speed, 0);
-            }
-            else
-            {
-                GameObject bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(0, 0, 180));
-                Rigidbody2D bi = bulletInstance.GetComponent<Rigidbody2D>();
-                bi.velocity = new Vector2(-speed, 0);
-                //Rigidbody2D bi = bulletInstance as Rigidbody2D;
+                if (EventSystem.current.IsPointerOverGameObject()) return;
+                GetComponent<AudioSource>().Play();
+                if (playerCtrl.bFaceRight)
+                {
+                    GameObject bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(0, 0, 0));
+                    Rigidbody2D bi = bulletInstance.GetComponent<Rigidbody2D>();
+                    bi.velocity = new Vector2(speed, 0);
+                }
+                else
+                {
+                    GameObject bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(0, 0, 180));
+                    Rigidbody2D bi = bulletInstance.GetComponent<Rigidbody2D>();
+                    bi.velocity = new Vector2(-speed, 0);
+                    //Rigidbody2D bi = bulletInstance as Rigidbody2D;
+                }
             }
         }
 
